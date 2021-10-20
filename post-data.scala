@@ -12,7 +12,7 @@ import org.mongodb.scala.model.UpdateOptions
 import org.mongodb.scala.bson.BsonObjectId
 
 
-object MongoGetPostTest extends App {
+object MongoPost extends App {
     implicit class DocumentObservable[C](val observable: Observable[Document]) extends ImplicitObservable[Document] {
         override val converter: (Document) => String = (doc) => doc.toJson
     }
